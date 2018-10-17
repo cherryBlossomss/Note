@@ -611,3 +611,50 @@ Git文件管理机制详解
 ![](D:\笔记\pictures\TIM截图20181016155025.png)
 
 ### 3.7在本地创建远程库以及别名
+
+* 查看远程库 git remote -v
+
+```shell
+user@TQ MINGW64 /d/笔记/hashan (master)
+$ git remote -v
+orign   https://github.com/cherryBlossomss/huashan.git (fetch)
+orign   https://github.com/cherryBlossomss/huashan.git (push)
+
+```
+
+* 起别名 git remote add orign https://github.com/cherryBlossomss/huashan.git
+
+* 推送 git push orign master
+
+  ```shell
+  $  git push orign master
+  fatal: ArgumentException encountered.
+     ▒▒▒▒▒▒˾▒▒▒▒▒ͬ▒▒▒▒▒
+  fatal: ArgumentException encountered.
+     ▒▒▒▒▒▒˾▒▒▒▒▒ͬ▒▒▒▒▒
+  Username for 'https://github.com': cherryBlossomss
+  fatal: ArgumentException encountered.
+     ▒▒▒▒▒▒˾▒▒▒▒▒ͬ▒▒▒▒▒
+  fatal: ArgumentException encountered.
+     ▒▒▒▒▒▒˾▒▒▒▒▒ͬ▒▒▒▒▒
+  Counting objects: 7, done.
+  Delta compression using up to 4 threads.
+  Compressing objects: 100% (4/4), done.
+  Writing objects: 100% (7/7), 635 bytes | 158.00 KiB/s, done.
+  Total 7 (delta 0), reused 0 (delta 0)
+  remote:
+  remote: Create a pull request for 'master' on GitHub by visiting:
+  remote:      https://github.com/cherryBlossomss/huashan/pull/new/master
+  remote:
+  To https://github.com/cherryBlossomss/huashan.git
+   * [new branch]      master -> master
+  
+  ```
+
+### 3.8 克隆操作
+
+* 命令： git clone 【远程地址】
+* 命令效果
+  * 完整吧远程库下载到本地
+  * 创建orign远程地址别名
+  * 初始化本地库
